@@ -1,0 +1,37 @@
+android {
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.0.5'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation Kotlin.stdLib
+
+    implementation AndroidX.appcompat
+
+    implementation Compose.runtime
+    implementation Compose.ui
+    implementation Compose.tooling
+    implementation Compose.foundation
+    implementation Compose.material
+    implementation Compose.icons
+    implementation Compose.iconsExtra
+    implementation Compose.activity
+
+    implementation Navigation.navigation
+
+    implementation DI.core
+    implementation DI.android
+    implementation DI.navigationGraph
+    implementation DI.compose
+
+    implementation Log.timber
+    implementation Concurrency.coroutines
+}

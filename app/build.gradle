@@ -1,0 +1,17 @@
+apply plugin: 'com.android.application'
+apply from: "$rootDir/buildSrc/src/CoreAndroid.gradle"
+apply from: "$rootDir/buildSrc/src/UiDependencies.gradle"
+
+android {
+    defaultConfig {
+        applicationId = "com.lukam.composeseedproject"
+    }
+}
+
+dependencies {
+    implementation project(":coreui")
+    implementation project(":commonui")
+    implementation project(":navigation")
+
+    implementation Material.materialComponents
+}
